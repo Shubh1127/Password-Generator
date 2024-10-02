@@ -34,15 +34,15 @@ const PG = () => {
     };
 
     return (
-        <div className="container">
-            <h1>Generate a &nbsp; <span>Random  Password</span>
+        <div className="container m-[10%] w-[100%] max-w-[700px]">
+            <h1 className="font-medium text-5xl">Generate a &nbsp; <span className='text-green-600 border-b-4 border-b-green-600 pb-1.5'>Random  Password</span>
             </h1>
-            <div className="display">
-                <input type="text" id="password" value={password} readOnly placeholder="password" />
-                <img src="/copy.png" alt="copy" onClick={copyPassword} />
+            <div className="display w-full mt-[50px] mb-[30px] bg-white text-black flex items-center justify-between py-6 px-5 rounded-md">
+                <input type="text" id="password" value={password} readOnly placeholder="password" className='border-0 outline-none text-2xl bg-transparent text-black' />
+                <img src="/copy.png" alt="copy" onClick={copyPassword} className='w-7 cursor-pointer' />
             </div>
-            <button onClick={createPassword}>
-                <img src="/generate.png" alt="generate" /> Generate Password
+            <button onClick={createPassword} className='border-0 bg-green-600 text-white text-2xl font-light flex justify-center py-4 px-6 rounded-md cursor-pointer'>
+                <img src="/generate.png" alt="generate" className='w-6 mr-2.5' /> Generate Password
             </button>
         </div>
     );
